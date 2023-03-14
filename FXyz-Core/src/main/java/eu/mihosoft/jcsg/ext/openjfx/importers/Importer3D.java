@@ -35,6 +35,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.URLClassLoader;
 
+import eu.mihosoft.jcsg.ext.openjfx.importers.obj.ObjOrPolyObjImporter;
 import javafx.animation.Timeline;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -91,6 +92,12 @@ public final class Importer3D {
      * @throws IOException if issue loading file
      */
     public static Pair<Node,Timeline> loadIncludingAnimation(String fileUrl, boolean asPolygonMesh) throws IOException {
+
+        Importer importer = new ObjOrPolyObjImporter();
+        importer.load(fileUrl, asPolygonMesh);
+        return new Pair<>(importer.getRoot(), importer.getTimeline());
+
+        /**
         // get extension
         final int dot = fileUrl.lastIndexOf('.');
         if (dot <= 0) {
@@ -151,5 +158,6 @@ public final class Importer3D {
             importer.load(fileUrl, asPolygonMesh);
             return new Pair<>(importer.getRoot(), importer.getTimeline());
         }
+         */
     }
 }
