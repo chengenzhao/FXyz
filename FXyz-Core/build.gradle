@@ -6,4 +6,5 @@ repositories {
 
 dependencies {
     api 'org.orbisgis:poly2tri-core:0.1.2'
+    implementation 'org.slf4j:slf4j-api:2.0.6'
 }
