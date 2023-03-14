@@ -5,7 +5,5 @@ repositories {
 }
 
 dependencies {
-    api ('eu.mihosoft.vrl.jcsg:jcsg:0.5.7') { transitive = false }
-    api 'eu.mihosoft.vvecmath:vvecmath:0.4.0'
     api 'org.orbisgis:poly2tri-core:0.1.2'
 }

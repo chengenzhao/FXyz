@@ -32,9 +32,9 @@ module org.fxyz3d.core {
     requires static javafx.swing;
     requires java.desktop;
     requires java.logging;
-    requires static jcsg;
-    requires static vvecmath;
     requires static poly2tri.core;
+    requires java.compiler;
+    requires javafx.fxml;
 
     exports org.fxyz3d.geometry;
     exports org.fxyz3d.io;
