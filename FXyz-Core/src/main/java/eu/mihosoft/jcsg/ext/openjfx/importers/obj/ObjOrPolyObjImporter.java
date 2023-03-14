@@ -57,7 +57,6 @@ public class ObjOrPolyObjImporter extends Importer {
       for (String mesh : reader.getMeshes()) {
         res.getChildren().add(reader.buildMeshView(mesh));
       }
-      ;
     }
   }
 
